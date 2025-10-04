@@ -1,0 +1,37 @@
+
+### GET users
+GET http://localhost:3000/users
+Accept: application/json
+
+
+### POST (create a new user)
+POST http://localhost:3000/users
+Content-Type: application/json
+
+{
+  "firstName": "Richard",
+  "lastName": "Friday",
+  "email": "richiefriday@example.com",
+  "favoriteColor": "Green",
+  "birthday": "20/03/2007"
+}
+
+### PUT (update an existing user)
+PUT http://localhost:3000/users/68d8698bccf3299f29418c85
+Content-Type: application/json
+
+{
+  "firstName": "June",
+  "lastName": "Doe",
+  "email": "junafriday@example.com",
+  "favoriteColor": "Purple",
+  "birthday": "20/03/2007"
+}
+
+### DELETE (remove a user)
+DELETE http://localhost:3000/users/68e158637e0259e0c645f2cd
+Accept: application/json
+
+
+
+# GET https://cse341-node-l5kx.onrender.com/users/
