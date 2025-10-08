@@ -3,12 +3,29 @@ const router = express.Router();
 
 const usersController = require('../controllers/users');
 
-router.get('/', usersController.getAll);
 
-router.post('/', usersController.createUser);
+// Get all users
+router.get('/', (req, res) => {
+  //#swagger.tags = ['Users']
+  usersController.getAll(req, res);
+});
 
-router.put('/:id', usersController.updateUser);
+// Create new user
+router.post('/', (req, res) => {
+  //#swagger.tags = ['Users']
+  usersController.createUser(req, res);
+});
 
-router.delete('/:id', usersController.deleteUser);
+// Update user
+router.put('/:id', (req, res) => {
+  //#swagger.tags = ['Users']
+  usersController.updateUser(req, res);
+});
+
+// Delete user
+router.delete('/:id', (req, res) => {
+  //#swagger.tags = ['Users']
+  usersController.deleteUser(req, res);
+});
 
 module.exports = router;
