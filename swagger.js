@@ -6,7 +6,7 @@ const doc = {
         description: 'Users API'
     },
     host: 'localhost:3000',
-    schemes: ['http', 'https'],
+    schemes: ['https'],
 };
 
 const outputFile = './swagger-output.json';
